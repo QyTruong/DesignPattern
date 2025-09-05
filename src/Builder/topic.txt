@@ -1,0 +1,24 @@
+- Bạn hãy xây dựng một Hệ thống tạo nhân vật trong game RPG.
+- Mỗi nhân vật có các thuộc tính phức tạp như:
+
++ name (String)
+
++ classType (String: "Warrior", "Mage", "Archer", …)
+
++ strength (int)
+
++ intelligence (int)
+
++ agility (int)
+
++ weapon (String)
+
++ armor (String)
+
+- Yêu cầu
+
+1. Tạo một nhân vật Warrior tên Arthur, strength cao, có sword + heavy armor.
+
+2. Tạo một nhân vật Mage tên Merlin, intelligence cao, có staff + robe.
+
+3. Tạo một nhân vật Archer tên Robin, agility cao, có bow + light armor.

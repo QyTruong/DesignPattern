@@ -1,0 +1,37 @@
+Bạn đang phát triển một game Adventure RPG (giống cái bạn đang làm). Trong game có Item System:
+
+- Có những item đơn giản như:
+
++ Potion (tăng máu)
+
++ Arrow (dùng cho cung)
+
++ Gold (tiền)
+
+- Nhưng cũng có item phức tạp (Composite):
+
++ Chest (cái rương) có thể chứa nhiều item (Potion, Gold, Arrow...).
+
++ Bundle (gói quà) có thể chứa cả item đơn giản và cả chest khác.
+
+Yêu cầu:
+
+1. Thiết kế hệ thống Item với Composite Pattern sao cho:
+
+- Có thể gọi use() cho bất kỳ item nào.
+
+- Với item đơn giản thì thực hiện hành động cụ thể (uống potion, thêm gold...).
+
+- Với composite item (Chest, Bundle), khi gọi use() thì nó sẽ duyệt và dùng hết tất cả item bên trong.
+
+2. Viết code mô phỏng tình huống:
+
+- Một Chest lớn chứa:
+
++ 50 Gold
+
++ Một Chest nhỏ bên trong có: Potion + Arrow
+
++ Một Bundle chứa: 100 Gold + Potion
+
+- Khi gọi use() trên Chest lớn → tất cả vật phẩm bên trong đều được dùng tuần tự.

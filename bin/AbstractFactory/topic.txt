@@ -1,0 +1,33 @@
+- Bạn cần xây dựng một hệ thống UI có thể thay đổi theo theme:
+
++ Dark Theme
+
++ Light Theme
+
+- Mỗi theme sẽ có các thành phần giao diện:
+
++ Button
+
++ Checkbox
+
+- Yêu cầu:
+
+1. Tạo interface cho Button và Checkbox (ví dụ Button.render(), Checkbox.render()).
+
+2. Tạo 2 bộ sản phẩm cụ thể:
+
++ DarkButton, DarkCheckbox
+
++ LightButton, LightCheckbox
+
+3. Tạo Abstract Factory:
+
++ UIFactory (có phương thức createButton() và createCheckbox()).
+
+4. Tạo Concrete Factories:
+
++ DarkThemeFactory
+
++ LightThemeFactory
+
+5. Client code sẽ nhận vào factory, rồi tạo ra cả Button lẫn Checkbox từ cùng một theme.

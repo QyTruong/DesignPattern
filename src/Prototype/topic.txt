@@ -1,0 +1,31 @@
+- Bạn đang phát triển một game Adventure RPG. Trong game có rất nhiều loại NPC (Non-Player Character) như:
+
++ Villager (dân làng)
+
++ Monster (quái vật)
+
++ Boss
+
+- Mỗi NPC có:
+
++ name
+
++ level
+
++ stats (máu, tấn công, phòng thủ…)
+
+- Yêu cầu:
+
+1. Sử dụng Prototype Pattern để:
+
++ Tạo ra các "mẫu NPC" (prototype) ban đầu.
+
++ Cho phép clone các prototype này để tạo ra nhiều NPC khác mà không phải khởi tạo từ đầu.
+
+2. Khi clone, bạn có thể tùy chỉnh một số thuộc tính (ví dụ: quái cùng loại nhưng khác level hoặc khác tên).
+
+3. In ra thông tin các NPC đã clone, chứng minh rằng chúng là các object khác nhau trong bộ nhớ, nhưng được tạo dựa trên prototype.
+
+Bonus:
+
+Hãy tạo một Prototype Registry (kiểu như một HashMap<String, NPC>) để lưu trữ các prototype. Khi cần, chỉ cần gọi registry.get("villager").clone() là có NPC mới ngay.

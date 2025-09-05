@@ -1,0 +1,25 @@
+- Bạn đang phát triển một game RPG. Trong game có class Weapon (vũ khí) với các thuộc tính cơ bản:
+
++ getDescription() → mô tả vũ khí.
+
++ getDamage() → lượng sát thương cơ bản.
+
+- Yêu cầu:
+
+1. Cài đặt các Decorator để mở rộng vũ khí với các thuộc tính sau:
+
++ Fire Enchantment: thêm sát thương lửa.
+
++ Ice Enchantment: thêm sát thương băng.
+
++ Poison Enchantment: thêm sát thương độc.
+
++ (bonus) Có thể stack nhiều enchantment (ví dụ: một thanh kiếm vừa có lửa vừa có độc).
+
+2. Người chơi có thể trang bị enchantment vào vũ khí lúc runtime mà không cần tạo nhiều subclass (SwordWithFire, SwordWithIce...).
+
+3. In ra màn hình:
+
++ Tên vũ khí + tất cả enchantments.
+
++ Tổng sát thương.

@@ -1,0 +1,24 @@
+- Một ứng dụng Java cần quản lý kết nối tới database.
+- Yêu cầu của bạn:
+
+1. Tạo class DatabaseConnectionPool dưới dạng Singleton:
+
++ Chỉ tồn tại một pool duy nhất trong chương trình.
+
++ Pool chứa một danh sách (queue) các "connection" (để đơn giản, bạn có thể giả lập Connection bằng class mock, không cần JDBC thật).
+
++ Giới hạn tối đa N connection (ví dụ N = 3).
+
+2. DatabaseConnectionPool cung cấp method:
+
++ getConnection() → lấy một connection từ pool (nếu còn). Nếu hết thì in thông báo "No available connections".
+
++ releaseConnection(Connection c) → trả connection về pool.
+
+3. Trong main:
+
++ Lấy thử nhiều connection liên tục (vượt quá N).
+
++ Trả lại một connection rồi lấy tiếp, để chứng minh pool hoạt động đúng.
+
++ Kiểm chứng rằng tất cả client đều dùng chung một pool (chỉ một instance).

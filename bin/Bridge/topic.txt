@@ -1,0 +1,35 @@
+- Bạn có 2 chiều thay đổi độc lập:
+
+1. Abstraction: Notification
+
++ Ví dụ: UrgentNotification, CasualNotification
+
++ Logic ở đây liên quan đến mức độ quan trọng, định dạng nội dung, vv.
+
+2. Implementor: MessageSender
+
++ Ví dụ: EmailSender, SmsSender, PushSender
+
++ Chịu trách nhiệm gửi thông báo qua kênh tương ứng.
+
+- Yêu cầu:
+
+1. Tạo interface MessageSender với method sendMessage(String content).
+
+2. Tạo implementors: EmailSender, SmsSender, PushSender.
+
+3. Tạo abstract class Notification giữ reference đến MessageSender.
+
+4. Tạo subclasses: UrgentNotification, CasualNotification.
+
++ Urgent có thể in thêm [URGENT] trước message.
+
++ Casual thì gửi bình thường.
+
+5. Trong main:
+
++ Dùng UrgentNotification với SmsSender.
+
++ Dùng CasualNotification với EmailSender.
+
++ Dùng UrgentNotification với PushSender.

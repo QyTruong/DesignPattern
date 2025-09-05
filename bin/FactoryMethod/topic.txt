@@ -1,0 +1,27 @@
+- Một ứng dụng có thể gửi thông báo cho người dùng bằng nhiều kênh khác nhau, ví dụ:
+
++ Email
+
++ SMS
+
++ Push Notification (ví dụ như thông báo trên app điện thoại)
+
+- Yêu cầu của bạn là:
+
+1. Thiết kế một interface/abstract class Notification (có phương thức send(String message)).
+
+2. Cài đặt các lớp cụ thể:
+
++ EmailNotification
+
++ SMSNotification
+
++ PushNotification
+
+3. Dùng Factory Method để tạo đúng loại Notification tùy theo tham số (ví dụ "EMAIL", "SMS", "PUSH").
+
+4. Viết demo main():
+
++ Tạo vài Notification khác nhau bằng factory.
+
++ Gọi send("Nội dung thông báo...") và in ra console mô phỏng việc gửi.
