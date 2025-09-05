@@ -1,0 +1,26 @@
+- Bạn đang làm một game RPG. Trong game có hệ thống Battle System khá phức tạp, bao gồm nhiều subsystem nhỏ:
+
++ EnergySystem (quản lý mana/stamina).
+
++ InventorySystem (quản lý vũ khí, item).
+
++ SoundSystem (chơi nhạc, hiệu ứng khi chiến đấu).
+
++ AnimationSystem (render animation skill, attack).
+
+-> Khi người chơi thực hiện 1 skill, lẽ ra client (User, hay GameController) phải gọi từng subsystem như:
+code:
+    energy.consume(20);
+    inventory.checkWeapon("sword");
+    animation.play("slash");
+    sound.play("sword_sound");
+=> phức tạp cho client
+
+
+- Yêu cầu
+
+1. Tạo một Facade class tên là BattleFacade, ẩn đi các subsystem bên trong.
+
+2. Client chỉ cần gọi 1 hàm duy nhất (ví dụ: useSkill("slash")) để thực hiện tất cả các bước.
+
+3. Làm 2 skill minh họa: "slash" (dùng kiếm), "fireball" (dùng phép).

@@ -18,6 +18,7 @@ import Decorator.IceEnchantment;
 import Decorator.PoisonEnchantment;
 import Decorator.Sword;
 import Decorator.Weapon;
+import Facade.BattleFacade;
 import FactoryMethod.NotificationFactory;
 import FactoryMethod.SmsNotification;
 import Prototype.*;
@@ -26,6 +27,12 @@ public class User {
     public static void main(String[] args) {
         
     }   
+
+    public static void facadeTest(){
+        BattleFacade skill = new BattleFacade();
+        skill.useSkill("slash");
+        skill.useSkill("fireball");
+    }
 
     public static void bridgeTest(){
         EmailSender email = new EmailSender();

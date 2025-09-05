@@ -1,0 +1,20 @@
+Bạn đang làm một game 2D có rất nhiều cây cối và đá trong bản đồ.
+
+- Mỗi Tree có các thuộc tính:
+
++ intrinsic (chung, ít thay đổi): loại cây (oak, pine), texture, màu sắc, chiều cao chuẩn.
+
++ extrinsic (riêng biệt, thay đổi thường xuyên): vị trí (x, y) trong map, kích thước scale cụ thể.
+
+Nếu bạn tạo 1.000.000 cây, việc lưu trữ texture và loại cây lặp đi lặp lại sẽ rất tốn bộ nhớ.
+→ Flyweight giải quyết bằng cách chia tách intrinsic state (chung, tái sử dụng) và extrinsic state (riêng, client quản lý).
+
+- Yêu cầu
+
+1. Tạo class TreeType (Flyweight): chứa intrinsic state (texture, loại, màu).
+
+2. Tạo class Tree (context): chứa extrinsic state (tọa độ x,y), và tham chiếu đến 1 TreeType.
+
+3. Tạo TreeFactory để quản lý cache của TreeType. Nếu cần tạo TreeType mới thì thêm, còn nếu đã có thì tái sử dụng.
+
+4. Client có thể tạo nhiều Tree nhưng chỉ dùng lại vài TreeType.
