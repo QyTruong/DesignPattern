@@ -21,12 +21,27 @@ import Decorator.Weapon;
 import Facade.BattleFacade;
 import FactoryMethod.NotificationFactory;
 import FactoryMethod.SmsNotification;
+import Flyweight.Tree;
+import Flyweight.TreeFactory;
+import Flyweight.TreeType;
 import Prototype.*;
 
 public class User {
     public static void main(String[] args) {
-        
+        flyweightTest();
     }   
+
+    public static void flyweightTest(){
+        TreeType type1 = TreeFactory.getTreeType("Oak", "Oak.png", "red", 3);
+        TreeType type2 = TreeFactory.getTreeType("Oak", "Oak.png", "red", 3);
+        
+        Tree tree1 = TreeFactory.getTree(20, 10, type1);
+        Tree tree2 = TreeFactory.getTree(15, 5, type2);
+        System.out.println(tree1.getInfo());
+        System.out.println(tree2.getInfo());
+        System.out.println(type1 == type2);
+        System.out.println(tree1 == tree2);
+    }
 
     public static void facadeTest(){
         BattleFacade skill = new BattleFacade();
