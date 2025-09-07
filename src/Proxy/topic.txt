@@ -1,0 +1,21 @@
+1. Tạo interface Video với phương thức play().
+
+2. Tạo lớp RealVideo:
+
++ Có constructor giả lập việc tải file (in "Loading video from disk...").
+
++ Có phương thức play() in "Playing video <filename>".
+
+3. Tạo lớp ProxyVideo:
+
++ Giữ tên file.
+
++ Chỉ khi gọi play() lần đầu mới khởi tạo RealVideo.
+
++ Các lần sau gọi lại thì dùng lại object cũ, không tải lại nữa.
+
+4. Tạo User để test:
+
++ Gọi ProxyVideo 2 lần với cùng một file.
+
++ Kiểm tra xem file có load lại không.

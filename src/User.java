@@ -25,10 +25,13 @@ import Flyweight.Tree;
 import Flyweight.TreeFactory;
 import Flyweight.TreeType;
 import Prototype.*;
+import Proxy.*;
 
 public class User {
     public static void main(String[] args) {
-        flyweightTest();
+        Video video = new ProxyVideo("Hello world video");
+        video.Play();
+        video.Play();
     }   
 
     public static void flyweightTest(){
